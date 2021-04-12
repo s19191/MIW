@@ -24,7 +24,7 @@ class Perceptron(object):
     def predict(self, X):
         return np.where(self.net_input(X) >= 0.0, 1, -1)
 
-class MultiPerceptron:
+class MultiClassPerceptron:
     def __init__(self, ppn1, ppn2):
         self.ppn1 = ppn1
         self.ppn2 = ppn2
@@ -64,7 +64,7 @@ class LogisticRegressionGD(object):
     def getProbability(self, y):
         return self.activation(self.net_input(y))
 
-class MultiLogisticRegressionGD:
+class MultiClassLogisticRegressionGD:
     def __init__(self, logisticRegression1, logisticRegression2):
         self.lrgd1 = logisticRegression1
         self.lrgd2 = logisticRegression2
@@ -102,7 +102,7 @@ def main():
     ppn02 = Perceptron(eta=0.1, n_iter=1000)
     ppn02.fit(y_train_02_subset, X_train_02_subset)
 
-    mppn = MultiPerceptron(ppn01, ppn02)
+    mppn = MultiClassPerceptron(ppn01, ppn02)
 
     plot_decision_regions(X=X_test, y=y_test, classifier=mppn)
     plt.xlabel(r'$x_1$')
@@ -130,7 +130,7 @@ def main():
         print('%1.7f' % each, end=" ")
     print()
 
-    mlrgd = MultiLogisticRegressionGD(lrgd01, lrgd02)
+    mlrgd = MultiClassLogisticRegressionGD(lrgd01, lrgd02)
 
     plot_decision_regions(X=X_test, y=y_test, classifier=mlrgd)
     plt.xlabel(r'$x_1$')
