@@ -8,7 +8,6 @@ from plotkab import plot_decision_regions
 from sklearn.tree import export_graphviz
 from sklearn.ensemble import RandomForestClassifier
 
-
 def main():
     iris = datasets.load_iris()
     X = iris.data[:, [2, 3]]
@@ -23,7 +22,6 @@ def main():
     # X_test_std = sc.transform(X_test)
     # X_combined_std = np.vstack((X_train_std, X_test_std))
     # y_combined = np.hstack((y_train, y_test))
-
 
     giniTree01 = DecisionTreeClassifier(criterion='gini', max_depth=4, random_state=1)
     giniTree01.fit(X_train, y_train)
@@ -97,13 +95,22 @@ def main():
     plt.title('Random Forest, n 5')
     plt.show()
 
-    forest03 = RandomForestClassifier(criterion='gini', n_estimators=5, random_state=1, n_jobs=-1)
+    forest03 = RandomForestClassifier(criterion='gini', n_estimators=10, random_state=1, n_jobs=-1)
     forest03.fit(X_train, y_train)
     plot_decision_regions(X_combined, y_combined, classifier=forest03, test_idx=range(105, 150))
     plt.xlabel('Długość płatka [cm]')
     plt.ylabel('Szerokość płatka [cm]')
     plt.legend(loc='upper left')
     plt.title('Random Forest, n 10')
+    plt.show()
+
+    forest04 = RandomForestClassifier(criterion='gini', n_estimators=15, random_state=1, n_jobs=-1)
+    forest04.fit(X_train, y_train)
+    plot_decision_regions(X_combined, y_combined, classifier=forest04, test_idx=range(105, 150))
+    plt.xlabel('Długość płatka [cm]')
+    plt.ylabel('Szerokość płatka [cm]')
+    plt.legend(loc='upper left')
+    plt.title('Random Forest, n 15')
     plt.show()
 
 if __name__ == '__main__':

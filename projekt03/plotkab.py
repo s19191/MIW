@@ -2,7 +2,6 @@ from matplotlib.colors import ListedColormap
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 def plot_decision_regions(X, y, classifier, test_idx=None, resolution=0.02):
     # konfiguruje generator znaczników i mapę kolorów
     markers = ('s', 'x', 'o', '^', 'v')
@@ -29,5 +28,3 @@ def plot_decision_regions(X, y, classifier, test_idx=None, resolution=0.02):
         X_test, y_test = X[list(test_idx), :], y[list(test_idx)]
         plt.scatter(X_test[:, 0], X_test[:, 1], color=(1, 1, 1, 0), edgecolor='black', alpha=1.0, linewidth=1, marker='o',
                     edgecolors='k', s=100, label='Zestaw testowy')
-
-
