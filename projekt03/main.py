@@ -14,7 +14,6 @@ def main():
     y = iris.target
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1, stratify=y)
 
-    # # zapytać się co to robi
     # # standardyzacja cech
     # sc = StandardScaler()
     # sc.fit(X_train)
@@ -74,7 +73,6 @@ def main():
     plt.title('Entropy, depth 6')
     plt.show()
 
-    # zapytać się co to robi
     # export_graphviz(giniTree01, out_file='drzewo.dot', feature_names=['Długość płatka', 'Szerokość płatka'])
 
     forest01 = RandomForestClassifier(criterion='gini', n_estimators=1, random_state=1, n_jobs=2)
