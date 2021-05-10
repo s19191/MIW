@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="db2b2874-a2e9-4ad8-9f1d-e63699cf5646" name="Default Changelist" comment="zrobione">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +65,8 @@
       <option name="presentableId" value="Default" />
       <updated>1620257644100</updated>
       <workItem from="1620257660707" duration="1052000" />
+      <workItem from="1620259376449" duration="234000" />
+      <workItem from="1620634789737" duration="1001000" />
     </task>
     <task id="LOCAL-00001" summary="zrobione">
       <created>1620258576203</created>
@@ -88,12 +91,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="zrobione" />
     <option name="LAST_COMMIT_MESSAGE" value="zrobione" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/projekt05$main.coverage" NAME="main Coverage Results" MODIFIED="1620258514212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/projekt05$main.coverage" NAME="main Coverage Results" MODIFIED="1620635777562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

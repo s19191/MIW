@@ -38,7 +38,6 @@ for epoka in range(1, 200):
     B1 = B1 + dB1
 
     if epoka % 10 == 0:
-        print(epoka)
         plt.plot(X[0], A2[0])
         plt.plot(X, Y, 'r*')
         plt.show()
